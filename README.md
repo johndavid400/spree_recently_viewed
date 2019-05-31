@@ -16,13 +16,16 @@ This extension maintains and displays a list of the products a user has recently
   ```ruby
   bundle install
   ```
-
-3. Copy & run migrations
+3. Include the javascript for this extension. Edit vendor/assets/javascripts/spree/frontend/all.js, adding this line to the end:
+  ```ruby
+  //= require spree/frontend/add_recently_viewed_products
+  ``` 
+4. Copy & run migrations
   ```ruby
   bundle exec rails g spree_recently_viewed:install
   ```
 
-4. Restart your server
+5. Restart your server
 
   If your server was running, restart it so that it can find the assets properly.
 
